@@ -1,9 +1,7 @@
 # SSTSS-Tool
 
-# SSTSS Tool
 
-**SSTSS** ([[{S}imulation-based \underline{S}afety \underline{T}esting \underline{S}cenario \underline{S}election) process]]) is an interactive **Scenario Database Management Tool** designed for organizing, filtering, prioritizing, and selecting driving scenarios for simulation and testing.  
-Built with **Python** and **PyQt5**, it provides an intuitive GUI for researchers, testers, and engineers working with scenario-based testing datasets.
+**SSTSS** ([[Simulation-based Safety Testing Scenario Selection process]]) is a scenario selection tool for prioritizing and selecting test scenarios for simulation-based safety testing of ADS.
 
 ---
 
@@ -11,15 +9,16 @@ Built with **Python** and **PyQt5**, it provides an intuitive GUI for researcher
 
 - **Scenario Catalog Selection** – Easily switch between catalogs (US, Singapore, Europe, Other).
 - **Flag Display** – Dynamic flag icon based on selected catalog.
-- **Scenario Management**:
+- **Scenario Selection**:
   1. View all available scenarios.
   2. Select Operational Design Domains (ODDs).
   3. Filter scenarios based on ODD selection.
   4. Assign scenarios to scenario groups.
-  5. Prioritize scenario groups for testing.
-  6. Filter scenarios by simulator compatibility (Carla, Gazebo, Audacity, LGSVL).
-  7. Review final selected scenarios.
+  5. Prioritize scenario groups for testing using the US or EU accident dataset.
+  6. Filter scenarios by simulator compatibility (Carla, Gazebo, LGSVL).
+  7. Assign a priority to each selected sceanrio within each scenario group using the US or EU dataset. 
 - **Excel-based Storage** – Reads and updates scenario datasets stored in `.xlsx` format.
+  
 - **Modular Design** – Separate scripts for each functional component.
 
 ---
@@ -27,20 +26,17 @@ Built with **Python** and **PyQt5**, it provides an intuitive GUI for researcher
 ## Screenshot
 
 ![SSTSS Main Window](assets/sstss_main.png)  
-*Example main interface with catalog selector and scenario actions.*  
-> **Note:** Replace with your actual screenshot(s).
-
----
 
 ## Workflow
 
 1. **Launch the Tool** – Run the main Python script.
 2. **Select Catalog** – Choose the dataset region (US, Singapore, Europe, Other).
-3. **View / Add Scenarios** – Add new entries or browse existing ones.
-4. **Select ODD** – Narrow down scenarios based on operational conditions.
-5. **Assign & Prioritize** – Group related scenarios and rank their importance.
-6. **Filter by Simulator** – Keep only scenarios compatible with a specific simulator.
-7. **Export / Review Final Set** – Prepare scenarios for testing or simulation.
+3. **View / Add Scenarios** – Add new scenario or browse existing ones.
+4. **Select ODD** – Narrow down scenarios based on operational design domain, i.e, (Dynamic, Environmental, Scenery ).
+5. **Assign & Prioritize** – Prioritize the sceanrio groups based on the selected accident dataset.
+6. **Filter by Simulator** – Keep only scenarios compatible with a selected simulator.
+7. **Assign Prioritize Scenario** – Assign a priority to each sceanrio within each sceanrio group using the selected accident dataset.
+8. **Final list of Test Scenarios** – List of test scenarios for testing or simulation.
 
 ---
 
@@ -50,3 +46,7 @@ Built with **Python** and **PyQt5**, it provides an intuitive GUI for researcher
 ```bash
 git clone https://github.com/[[your-username]]/sstss-tool.git
 cd sstss-tool
+
+**## Run the Application**
+
+python main_window.py
