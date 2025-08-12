@@ -7,8 +7,9 @@
 
 ## Features
 
-- **Scenario Catalog Selection** – Easily switch between catalogs (US, Singapore, Europe, Other).
-- **Flag Display** – Dynamic flag icon based on selected catalog.
+- **Scenario Catalog Selection** – Select between catalogs (US, Singapore, Europe, Other). By default, a Singapore catalog is preloaded.
+- **Custom Scenario catalog** –  Add your own scenario catalogs directly within the tool
+
 - **Scenario Selection**:
   1. View all available scenarios.
   2. Select Operational Design Domains (ODDs).
