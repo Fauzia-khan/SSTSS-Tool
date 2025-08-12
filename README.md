@@ -48,6 +48,6 @@
 git clone https://github.com/[[your-username]]/sstss-tool.git
 cd sstss-tool
 
-**## Run the Application**
+### 2. Run the Application**
 
 python main_window.py
